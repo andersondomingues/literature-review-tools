@@ -1,6 +1,9 @@
 <?php 
-
-	$FILE_NAME = "results.csv";
+	$FILE_NAME = readline("Nome do Arquivo CSV: ");
+	$output_filename = $FILE_NAME;
+	$FILE_NAME .= ".csv";
+	#$FILE_NAME = "springer_13_16.csv";
+	#$output_filename = "springer_13_16";
 
 	#variavel para armazenar as novas linhas
 	$novas_linhas = array();
@@ -46,7 +49,7 @@
 		echo $linha;
 	} 
 
-	file_put_contents($FILE_NAME . ".bib", implode("", $novas_linhas));
+	file_put_contents($output_filename . ".bib", implode("", $novas_linhas));
 
 
 
